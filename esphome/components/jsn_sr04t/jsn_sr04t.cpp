@@ -32,11 +32,8 @@ void Jsnsr04tComponent::loop() {
 
 void Jsnsr04tComponent::check_buffer_() {
   uint8_t checksum = this->buffer_[1] + this->buffer_[2];
-  if(!ajsr04m)
+  if(!ajsr04m_)
     checksum += this->buffer_[0];
-  ESP_LOGW(TAG, "test");
-  if(ajsr04m_)
-      ESP_LOGW(TAG, "test ajsr04");
   
   if (this->buffer_[3] == checksum) {
     uint16_t distance = encode_uint16(this->buffer_[1], this->buffer_[2]);
