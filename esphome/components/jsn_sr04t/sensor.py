@@ -49,4 +49,4 @@ async def to_code(config):
     await cg.register_component(var, config)
     await uart.register_uart_device(var, config)
     
-    cg.add(var.set_ajsr04m(config[CONF_AJ_SR04M]))
+    cg.add(var.set_ajsr04m(config[CONF_AJSR04M]))
