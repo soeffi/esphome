@@ -29,7 +29,7 @@ CONFIG_SCHEMA = (
     .extend(uart.UART_DEVICE_SCHEMA)
     .extend(
         {
-            cv.Optional(CONF_AJSR04M, default=false): cv.bool_,
+            cv.Optional(CONF_AJSR04M, default=false): cv.boolean,
         }
     )
 )
