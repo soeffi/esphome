@@ -14,9 +14,6 @@ class Jsnsr04tComponent : public sensor::Sensor, public PollingComponent, public
   // Nothing really public.
   void set_ajsr04m(uint8_t ajsr04m) { this->ajsr04m_ = ajsr04m; }
 
- protected:
-  uint8_t resolution_;
-
   // ========== INTERNAL METHODS ==========
   void update() override;
   void loop() override;
