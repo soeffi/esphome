@@ -51,7 +51,7 @@ void Jsnsr04tComponent::check_buffer_() {
 }
 
 void Jsnsr04tComponent::dump_config() {
-  LOG_SENSOR("", "JST_SR04T Sensor", this);
+  LOG_SENSOR("", "JST_SR04T Sensor - new", this);
   ESP_LOGCONFIG(TAG, "  checksum mode: %s", this->ajsr04m_ ? "aj_sr04m" : "jsn_sr04t");
   LOG_UPDATE_INTERVAL(this);
 }
