@@ -5,7 +5,7 @@ from esphome.const import (
     STATE_CLASS_MEASUREMENT,
     UNIT_METER,
     ICON_ARROW_EXPAND_VERTICAL,
-    )
+)
 
 CODEOWNERS = ["@Mafus1"]
 DEPENDENCIES = ["uart"]
