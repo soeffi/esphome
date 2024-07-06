@@ -26,7 +26,7 @@ class Jsnsr04tComponent : public sensor::Sensor, public PollingComponent, public
 
  protected:
   void check_buffer_();
-  Model model_;
+  Model model_ = jsn_sr04t;
 
   std::vector<uint8_t> buffer_;
 };
