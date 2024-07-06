@@ -58,7 +58,16 @@ void Jsnsr04tComponent::check_buffer_() {
 
 void Jsnsr04tComponent::dump_config() {
   LOG_SENSOR("", "JST_SR04T Sensor - new", this);
-  ESP_LOGCONFIG(TAG, "  checksum mode: %s", this->ajsr04m_ ? "aj_sr04m" : "jsn_sr04t");
+  switch (this->model_) {
+    case jsn_sr04t:
+      ESP_LOGCONFIG(TAG, "  sensor model: jsn_sr04t");
+      break;
+    case aj_sr04m:
+      ESP_LOGCONFIG(TAG, "  sensor model: aj_sr04m");
+      break;
+    default:
+      ESP_LOGE(TAG, "  sensor model undefined, set 'model' option in YAML");
+  }
   LOG_UPDATE_INTERVAL(this);
 }
 
