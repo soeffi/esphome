@@ -16,6 +16,12 @@ Jsnsr04tComponent = jsn_sr04t_ns.class_(
     "Jsnsr04tComponent", sensor.Sensor, cg.PollingComponent, uart.UARTDevice
 )
 
+Model = jsn_sr04t.enum("Model")
+MODEL = {
+    "jsn_sr04t": Model.jsn_sr04t,
+    "aj_sr04m": Mode.aj_sr04m,
+}
+
 CONFIG_SCHEMA = (
     sensor.sensor_schema(
         Jsnsr04tComponent,
