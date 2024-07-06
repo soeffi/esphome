@@ -28,7 +28,7 @@ CONFIG_SCHEMA = (
     .extend(uart.UART_DEVICE_SCHEMA)
     .extend(
         {
-            cv.Optional(CONF_MODEL, default=jsn_sr04t): cv.enum(
+            cv.Optional(CONF_MODEL, default="jsn_sr04t"): cv.enum(
                 MODEL, upper=False
             ),
         }
